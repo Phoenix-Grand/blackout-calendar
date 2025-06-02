@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Year Calendar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="controls">
+    <input type="text" id="calendarName" placeholder="Enter calendar name">
+    <button onclick="createCalendar()">Create Calendar</button>
+    <button onclick="saveCalendars()">Save Calendars</button>
+    <button onclick="loadCalendars()">Load Calendars</button>
+    <select id="calendarList" onchange="switchCalendar(this.value)">
+        <option value="">Select a calendar...</option>
+    </select>
+    <button onclick="generateQR()">Generate QR Code</button>
+    <canvas id="qrcode"></canvas>
+</div>
+<div id="calendarContainer"></div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.0/build/qrcode.min.js"></script>
+</body>
+</html>
